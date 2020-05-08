@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.MainActivity">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_messages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/send_layout"
+            android:clipToPadding="false"
+            android:padding="16dp"
+            tools:listitem="@layout/li_message" />
+
+        <LinearLayout
+            android:id="@+id/send_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="16dp">
+
+            <!--            <ImageButton-->
+            <!--                android:id="@+id/photoPickerButton"-->
+            <!--                android:src="@drawable/ic_image"-->
+            <!--                android:layout_width="36dp"-->
+            <!--                android:layout_height="36dp" />-->
+
+            <EditText
+                android:id="@+id/ed_message"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/btn_send"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:enabled="false"
+                android:text="@string/send" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
